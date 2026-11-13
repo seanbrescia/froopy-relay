@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Returning to Froopy’s World</title>
+<style>
+  html,body{margin:0;min-height:100%;background:#080b11;color:#e7f1f4;font:16px/1.5 system-ui,sans-serif}
+  main{max-width:36rem;padding:3rem 1.5rem}
+  a{color:#8be4d3}
+</style>
+</head>
+<body>
+<main>
+  <p>Returning to Froopy’s World...</p>
+  <p><a id="manual" href="http://127.0.0.1:4173/connect/etsy/callback">Continue if you are not redirected</a></p>
+</main>
+<script>
+(function () {
+  var dest = "http://127.0.0.1:4173/connect/etsy/callback" + location.search;
+  var link = document.getElementById("manual");
+  if (link) link.href = dest;
+  location.replace(dest);
+})();
+</script>
+</body>
+</html>
